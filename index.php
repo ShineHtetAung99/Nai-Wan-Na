@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,20 +21,21 @@
 </head>
 
 <body>
+    
     <!--########################### Header Starts Here ###################### -->
     <div class="home-screen container-fluid">
         <div class="home-cover">
             <div id="menu-jk" class="header">
                 <div class="container">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-md-3 logo">
                             <!-- <img class="logo-wt" src="assets/images/logo.png" alt="" />
                             <img class="logo-gry" src="assets/images/logo-gray.png" alt="" /> -->
-                            <h2 class="logo-wt" style="align-items: center;">Nai's Profile</h2>
-                            <h2 class="logo-gry" style="align-items: center;">Nai's Profile</h2>
+                            <h2 class="logo-wt py-auto">Nai's Profile</h2>
+                            <h2 class="logo-gry py-auto">Nai's Profile</h2>
 
-                            <a data-toggle="collapse" data-target="#menu" href="#menu"><i
-                                    class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                            <!-- <a data-toggle="collapse" data-target="#menu" href="#menu"><i
+                                    class="fas d-block d-md-none small-menu fa-bars"></i></a> -->
                         </div>
                         <div id="menu" class="col-md-9 d-none d-md-block">
                             <ul>
@@ -377,38 +379,40 @@
             </div>
             <div class="col-sm-6 cop-ck">
                 <h2>Contact Form</h2>
-                <div class="row cf-ro">
-                    <div class="col-sm-3"><label>Enter Name :</label></div>
-                    <div class="col-sm-8">
-                        <input type="text" placeholder="Enter Name" name="name" class="form-control input-sm" />
+                <form action="send.php" method="POST">
+                    <div class="row cf-ro">
+                        <div class="col-sm-3"><label>Enter Name :</label></div>
+                        <div class="col-sm-8">
+                            <input type="text" placeholder="Enter Name" name="name" class="form-control input-sm" required/>
+                        </div>
                     </div>
-                </div>
-                <div class="row cf-ro">
-                    <div class="col-sm-3"><label>Email Address :</label></div>
-                    <div class="col-sm-8">
-                        <input type="text" name="name" placeholder="Enter Email Address"
-                            class="form-control input-sm" />
+                    <div class="row cf-ro">
+                        <div class="col-sm-3"><label>Email Address :</label></div>
+                        <div class="col-sm-8">
+                            <input type="email" name="email" placeholder="Enter Email Address"
+                                class="form-control input-sm" required/>
+                        </div>
                     </div>
-                </div>
-                <div class="row cf-ro">
-                    <div class="col-sm-3"><label>Mobile Number:</label></div>
-                    <div class="col-sm-8">
-                        <input type="text" name="name" placeholder="Enter Mobile Number"
-                            class="form-control input-sm" />
+                    <div class="row cf-ro">
+                        <div class="col-sm-3"><label>Mobile Number:</label></div>
+                        <div class="col-sm-8">
+                            <input type="number" name="phone" placeholder="Enter Mobile Number"
+                                class="form-control input-sm" required/>
+                        </div>
                     </div>
-                </div>
-                <div class="row cf-ro">
-                    <div class="col-sm-3"><label>Enter Message:</label></div>
-                    <div class="col-sm-8">
-                        <textarea rows="5" placeholder="Enter Your Message" class="form-control input-sm"></textarea>
+                    <div class="row cf-ro">
+                        <div class="col-sm-3"><label>Enter Message:</label></div>
+                        <div class="col-sm-8">
+                            <textarea rows="5" name="message" placeholder="Enter Your Message" class="form-control input-sm" required></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="row cf-ro">
-                    <div class="col-sm-3"><label></label></div>
-                    <div class="col-sm-8">
-                        <button class="btn btn-primary btn-sm">Send Message</button>
+                    <div class="row cf-ro">
+                        <div class="col-sm-3"><label></label></div>
+                        <div class="col-sm-8">
+                            <button type="submit" name="send" class="btn btn-primary btn-sm">Send Message</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -426,6 +430,7 @@
         </div>
     </footer>
     <!-- End  Footer -->
+    
 </body>
 
 <script src="assets/js/jquery-3.2.1.min.js"></script>

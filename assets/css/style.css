@@ -386,6 +386,10 @@ html {
   display: none !important;
 }
 
+.home-screen .logo-wt {
+  color: #FFFFFF;
+}
+
 .home-screen .scroll-to-fixed-fixed .small-menu {
   color: #444;
   margin-top: -40px;
@@ -548,6 +552,10 @@ html {
   color: #dad6d6;
 }
 
+.home-screen .socil-icon li a:hover {
+  color: #FE9C2C;
+}
+
 .small-menu {
   float: right;
   color: #fff;
@@ -687,7 +695,7 @@ html {
 /* =================== Services Starts Here =================== */
 .services {
   padding: 50px;
-  background-color: #F9F9F9;
+  background-color: #FFF;
 }
 
 @media screen and (max-width: 940px) {
