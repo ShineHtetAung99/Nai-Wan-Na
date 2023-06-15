@@ -6,7 +6,6 @@
     $phone = $_POST['phone'];
     $message = $_POST['message'];
 
-    echo $name, $email, $phone, $message;
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
@@ -39,7 +38,11 @@
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
-        echo 'Message has been sent';
+        echo 
+            "<script>
+                alert('Message has been sent');
+                window.location.href = 'index.php';
+            </script>";
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
